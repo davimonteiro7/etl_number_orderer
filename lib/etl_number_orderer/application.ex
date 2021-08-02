@@ -7,12 +7,11 @@ defmodule EtlNumberOrderer.Application do
 
   def start(_type, _args) do
     children = [
-      # Start the Telemetry supervisor
-      EtlNumberOrdererWeb.Telemetry,
       # Start the PubSub system
       {Phoenix.PubSub, name: EtlNumberOrderer.PubSub},
       # Start the Endpoint (http/https)
-      EtlNumberOrdererWeb.Endpoint
+      EtlNumberOrdererWeb.Endpoint,
+      EtlNumberOrderer.Integration.GetNumbers.child_spec()
       # Start a worker by calling: EtlNumberOrderer.Worker.start_link(arg)
       # {EtlNumberOrderer.Worker, arg}
     ]
