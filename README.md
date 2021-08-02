@@ -1,18 +1,9 @@
-# EtlNumberOrderer
+# ETL Number Orderer
 
-To start your Phoenix server:
+## Instructions
 
-  * Install dependencies with `mix deps.get`
-  * Start Phoenix endpoint with `mix phx.server`
-
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+*  Project download     - `git clone https://github.com/davimonteiro7/etl_number_orderer.git`
+*  Open project folder  - `cd etl_number_orderer`
+*  Install dependencies - `mix deps.get`
+*  Run application      - `mix phx.server`
+*  Load sorted numbers  - `curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http:/localhost:4000/api/load_sorted_numbers`
